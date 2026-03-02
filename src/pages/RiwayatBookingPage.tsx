@@ -111,7 +111,11 @@ const RiwayatBookingPage: React.FC = () => {
 
       <div className="px-4 lg:px-6 py-4 space-y-3">
         {filtered.map((booking) => (
-          <div key={booking.id} className="card">
+          <div 
+            key={booking.id} 
+            onClick={() => navigate(`/booking/detail/${booking.id}`)}
+            className="card active:scale-[0.99] transition-all cursor-pointer hover:border-primary-100 shadow-sm"
+          >
             <div className="flex items-start justify-between">
               <div>
                 <p className="font-medium text-sm text-gray-800">{booking.namaPerusahaan}</p>
@@ -137,6 +141,17 @@ const RiwayatBookingPage: React.FC = () => {
             <div className="mt-3 pt-3 border-t border-gray-100 flex justify-between">
               <div>
                 <p className="text-xs text-gray-400">Kirim: {formatTanggal(booking.tanggalKirim)} • {booking.frekuensi}</p>
+                {booking.status === 'dikonfirmasi' && (
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate('/pembayaran', { state: { bookingId: booking.id } });
+                    }}
+                    className="mt-2 bg-primary-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-lg hover:bg-primary-700 transition-colors shadow-sm shadow-primary-200"
+                  >
+                    Bayar Booking
+                  </button>
+                )}
               </div>
               <p className="font-display font-bold text-primary-700">{formatRupiah(booking.totalHarga)}</p>
             </div>

@@ -481,6 +481,16 @@ export const dummyOrders: Order[] = [
     metodeBayar: 'COD', alamatKirim: 'Jl. Braga No. 20, Bandung',
     jadwalKirim: '2026-02-26 14:00', status: 'selesai', tanggalDibuat: '2026-02-23',
   },
+  {
+    id: 'ORD004',
+    items: [
+      { produkId: 'PRD001', storeId: 'STR008', storeName: 'Agro Bandung Barat', produkNama: 'Brokoli Segar Premium', harga: 15000, gambar: '🥦', satuan: '250g', jumlah: 4 },
+      { produkId: 'PRD007', storeId: 'STR002', storeName: 'Agro Garut', produkNama: 'Tomat Cherry Merah', harga: 22000, gambar: '🍅', satuan: '250g', jumlah: 2 },
+    ],
+    totalHarga: 104000, ongkir: 12000,
+    metodeBayar: 'Transfer Bank', alamatKirim: 'Jl. Dago No. 100, Bandung',
+    jadwalKirim: '2026-03-05 09:00', status: 'menunggu_bayar', tanggalDibuat: '2026-03-01',
+  },
 ];
 
 

@@ -20,6 +20,8 @@ import DetailPaketPage from './pages/DetailPaketPage';
 import BookingPage from './pages/BookingPage';
 import FormBookingPage from './pages/FormBookingPage';
 import RiwayatBookingPage from './pages/RiwayatBookingPage';
+import DetailBookingPage from './pages/DetailBookingPage';
+import BookingInstructionsPage from './pages/BookingInstructionsPage';
 import KeranjangPage from './pages/KeranjangPage';
 import CheckoutPage from './pages/CheckoutPage';
 import ProfilPage from './pages/ProfilPage';
@@ -67,6 +69,8 @@ const App: React.FC = () => {
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/booking/form" element={<FormBookingPage />} />
         <Route path="/booking/riwayat" element={<RiwayatBookingPage />} />
+        <Route path="/booking/detail/:id" element={<DetailBookingPage />} />
+        <Route path="/booking/panduan" element={<BookingInstructionsPage />} />
         <Route path="/keranjang" element={<KeranjangPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/profil" element={<ProfilPage />} />

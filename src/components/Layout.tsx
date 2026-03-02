@@ -9,7 +9,7 @@ import BottomNav from './BottomNav';
 import Navbar from './Navbar';
 
 // Pages that show bottom nav (main menu pages only)
-const bottomNavPaths = ['/', '/paket', '/booking', '/booking/form', '/booking/riwayat', '/profil'];
+const bottomNavPaths = ['/', '/paket', '/booking', '/profil'];
 
 const Layout: React.FC = () => {
   const location = useLocation();
